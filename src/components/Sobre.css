@@ -1,0 +1,47 @@
+/* src/components/Sobre.css */
+.sobre {
+    background-color: #ffffff;
+    padding: 3rem 2rem;
+  }
+  
+  .sobre-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+  
+  .sobre-img {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+  }
+  
+  .sobre-img img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 50%;
+  }
+  
+  .sobre-texto {
+    flex: 2;
+    min-width: 280px;
+  }
+  
+  .sobre-texto h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #001f3f;
+  }
+  
+  .sobre-texto p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+  }
+  

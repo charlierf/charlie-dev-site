@@ -1,0 +1,29 @@
+/* src/components/Certificacoes.css */
+.certificacoes {
+    padding: 3rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .certificacoes h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #001f3f;
+  }
+  
+  .certificacoes ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .certificacoes ul li {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    text-align: left;
+  }
+  

@@ -1,0 +1,31 @@
+/* src/components/Habilidades.css */
+.habilidades {
+    background-color: #f2f2f2;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  .habilidades h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: #001f3f;
+  }
+  
+  .habilidades-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .habilidade {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .habilidade h3 {
+    margin-top: 0;
+    color: #ff851b;
+  }
+  

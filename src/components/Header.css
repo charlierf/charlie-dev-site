@@ -1,0 +1,99 @@
+/* src/components/Header.css */
+header {
+    background-color: #001f3f;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-sizing: border-box;
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Logo */
+  .logo a {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  /* Menu de navegação */
+  .nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .nav ul li a:hover {
+    color: #ff851b;
+  }
+
+
+  
+  /* Hamburger */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #ffffff;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    /* Oculta o menu de navegação e exibe o hamburger */
+    .nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100%;
+      background-color: #001f3f;
+      transition: right 0.3s ease;
+      padding-top: 5rem;
+    }
+  
+    .nav.aberto {
+      right: 0;
+    }
+
+    .nav.aberto .close {
+        display: block;
+    }
+  
+    .nav ul {
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  }
+  
+  /* Garantir que o body não tenha espaço a direita */
+  body {
+    overflow-x: hidden;
+  }

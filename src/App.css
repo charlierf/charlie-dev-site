@@ -1,0 +1,85 @@
+/* src/App.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: #f9f9f9;
+  }
+  
+  /* header {
+    background: #001f3f;
+    color: white;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  } */
+  
+  nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  section {
+    padding: 4rem 2rem;
+  }
+  
+  .hero {
+    background: url('/assets/banner-background.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-content button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background: #ff851b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .hero-content button:hover {
+    background: #e67e22;
+  }
+  
+  /* Exemplo de media query para telas com largura máxima de 768px */
+@media (max-width: 768px) {
+    body, html {
+      font-size: 16px;
+    }
+  
+    header {
+      padding: 0.8rem 1rem;
+    }
+    
+    nav ul {
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+  }
+  
