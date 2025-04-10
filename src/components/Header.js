@@ -1,5 +1,6 @@
 // src/components/Header.js
 import React, { useState, useRef, useEffect } from 'react';
+import logo from '../assets/logo.png';
 import './Header.css';
 
 const Header = () => {
@@ -32,8 +33,10 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-container">
-        <div className="logo">
-          <a href="#inicio">Charlie Fonseca</a>
+        <div className="logo">          
+          <a href="#inicio">
+          <img src={logo} alt="Logo" />
+            Charlie Fonseca</a>
         </div>
         <nav ref={navRef} className={`nav ${menuAberto ? 'aberto' : ''}`}>
           <ul>
