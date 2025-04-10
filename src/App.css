@@ -33,7 +33,6 @@ body, html {
   }
   
   .hero {
-    background: url('/assets/banner-background.jpg') center/cover no-repeat;
     color: white;
     text-align: center;
     height: 80vh;

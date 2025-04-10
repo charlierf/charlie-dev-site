@@ -1,5 +1,5 @@
 .hero {
-    background: url('/assets/banner-background.jpg') center/cover no-repeat;
+    background: url('../assets/banner-background.jpg') center/cover no-repeat;
     height: 80vh;
     display: flex;
     align-items: center;
