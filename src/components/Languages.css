@@ -1,0 +1,51 @@
+/* src/components/Languages.css */
+.languages {
+    background-color: #f9f9f9;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  .languages h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: #001f3f;
+  }
+  
+  .languages-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .language {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    transition: transform 0.3s ease;
+  }
+  
+  .language:hover {
+    transform: translateY(-5px);
+  }
+  
+  .language h3 {
+    margin-top: 0;
+    color: #ff851b;
+    margin-bottom: 1rem;
+  }
+  
+  .language-status {
+    background-color: #001f3f;
+    padding: 0.5rem;
+    border-radius: 20px;
+  }
+  
+  .status-label {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
