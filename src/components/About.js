@@ -1,8 +1,8 @@
 import React from 'react';
-import './Sobre.css';
+import './About.css';
 import fotoPerfil from '../assets/foto.jpg'; // substitua com o nome do arquivo real
 
-const Sobre = () => {
+const About = () => {
   return (
     <section id="sobre" className="sobre">
       <div className="sobre-wrapper">
@@ -26,4 +26,4 @@ const Sobre = () => {
   );
 };
 
-export default Sobre;
+export default About;

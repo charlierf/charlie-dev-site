@@ -1,7 +1,7 @@
 import React from 'react';
-import './Certificacoes.css';
+import './Certifications.css';
 
-const Certificacoes = () => {
+const Certifications = () => {
   return (
     <section id="certificacoes" className="certificacoes">
       <h2>Certificações & Conquistas</h2>
@@ -17,4 +17,4 @@ const Certificacoes = () => {
   );
 };
 
-export default Certificacoes;
+export default Certifications;

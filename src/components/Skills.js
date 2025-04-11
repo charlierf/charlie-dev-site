@@ -1,8 +1,8 @@
-// src/components/Habilidades.js
+// src/components/Skills.js
 import React from 'react';
-import './Habilidades.css';
+import './Skills.css';
 
-const Habilidades = () => {
+const Skills = () => {
   return (
     <section id="habilidades" className="habilidades">
       <h2>Habilidades</h2>
@@ -32,4 +32,4 @@ const Habilidades = () => {
   );
 };
 
-export default Habilidades;
+export default Skills;

@@ -1,12 +1,13 @@
 import React from 'react';
+import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Sobre from './components/Sobre';
-import Habilidades from './components/Habilidades';
-import Experiencia from './components/Experiencia';
-import Projetos from './components/Projetos';
-import Certificacoes from './components/Certificacoes';
-import Contato from './components/Contato';
+import About from './components/About';
+import Skills from './components/Skills';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Certifications from './components/Certifications';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
@@ -15,12 +16,12 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <Sobre />
-        <Habilidades />
-        <Experiencia />
-        <Projetos />
-        <Certificacoes />
-        <Contato />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Certifications />
+        <Contact />
       </main>
       <Footer />
     </div>

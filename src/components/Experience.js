@@ -1,8 +1,8 @@
-// src/components/Experiencia.js
+// src/components/Experience.js
 import React from 'react';
-import './Experiencia.css';
+import './Experience.css';
 
-const Experiencia = () => {
+const Experience = () => {
   return (
     <section id="experiencia" className="experiencia">
       <h2>Experiência</h2>
@@ -40,4 +40,4 @@ const Experiencia = () => {
   );
 };
 
-export default Experiencia;
+export default Experience;

@@ -1,8 +1,8 @@
 // src/components/Projetos.js
 import React from 'react';
-import './Projetos.css';
+import './Projects.css';
 
-const Projetos = () => {
+const Projects = () => {
   return (
     <section id="projetos" className="projetos">
       <h2>Projetos</h2>
@@ -36,4 +36,4 @@ const Projetos = () => {
   );
 };
 
-export default Projetos;
+export default Projects;
