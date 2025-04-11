@@ -17,6 +17,8 @@
     flex: 1;
     min-width: 280px;
     text-align: center;
+    overflow: hidden; /* Garante que a imagem não ultrapasse o círculo */
+    border-radius: 50%; /* Mantém o formato circular */
   }
   
   .sobre-img img {
@@ -25,7 +27,12 @@
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     border-radius: 50%;
+    transition: transform 0.3s ease; /* Suaviza o efeito de zoom */
   }
+
+  .sobre-img img:hover {
+    transform: scale(1.1); /* Aumenta o tamanho da imagem em 10% */
+}
   
   .sobre-texto {
     flex: 2;

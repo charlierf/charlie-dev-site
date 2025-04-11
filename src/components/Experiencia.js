@@ -8,21 +8,28 @@ const Experiencia = () => {
       <h2>Experiência</h2>
       <div className="timeline">
         <div className="timeline-item">
-          <h3>Estagiário em Inteligência Artificial – Chip</h3>
-          <span className="timeline-date">Junho 2024 – Presente</span>
+          <h3>Estagiário em Inteligência Artificial – Chip & Cia</h3>
+          <span className="timeline-date">Junho 2024 – Março 2025</span>
           <p>
-            Coautor do AssessorAI, sistema que automatiza a geração de pareceres jurídicos utilizando LLMs e pipeline RAG com LangChain, OpenAIEmbeddings e InMemoryVectorStore. Integração via ChatOpenAI/ChatOllama, com chains customizadas.
+            Coautor do <a href='https://revistas.inpi.gov.br/pdf/Programa_de_computador2827.pdf'>AssessorAI</a>, sistema registrado no INPI que automatiza a geração de pareceres jurídicos utilizando LLMs e pipeline RAG com LangChain. Integração via OpenAI/Ollama, com chains customizadas.
           </p>
         </div>
         <div className="timeline-item">
-          <h3>Desenvolvedor & Pesquisador em Projetos Acadêmicos</h3>
-          <span className="timeline-date">2022 – Atual</span>
+          <h3>Participante – Campus Mobile</h3>
+          <span className="timeline-date">Janeiro 2025 – Fevereiro 2025</span>
           <p>
-            Desenvolvimento dos projetos HelpU (app para diagnósticos radiográficos), ReciclaHub (app de sustentabilidade com gamificação e rotas inteligentes) e Reconhecimento Facial com Keras.
+          Participante na categoria Saúde da 13ª Edição do Programa Campus Mobile, com o Projeto <a href='https://www.institutoclaro.org.br/nossas-novidades/conheca-os-projetos-selecionados-para-a-13a-edicao-do-campus-mobile/'>𝗛𝗲𝗹𝗽𝗨</a>, um aplicativo para cirurgiões-dentista que faz laudos radiográficos através de CNNs, com protótipo desenvolvido em FlutterFlow e Python.
           </p>
         </div>
         <div className="timeline-item">
-          <h3>Advogado Autônomo – Charlie Fonseca | Advocacia e Consultoria</h3>
+          <h3>Desenvolvedor Front-end – Softeam</h3>
+          <span className="timeline-date">Abril 2019 – Setembro 2020</span>
+          <p>
+            Desenvolvimento de aplicações web utilizando ReactJS, atuando na construção de um sistema para gerir as despesas fiscais, previdenciárias e trabalhistas com empregados domésticos.
+          </p>
+        </div>
+        <div className="timeline-item">
+          <h3><a href="https://charliefonseca.com.br">Advogado Autônomo – Charlie Fonseca | Advocacia e Consultoria</a></h3>
           <span className="timeline-date">Fevereiro 2015 – Presente</span>
           <p>
             Atuação especializada em Direito Imobiliário e Cível, fortalecendo a integração entre soluções tecnológicas e automação de processos legais.

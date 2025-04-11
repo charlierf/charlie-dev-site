@@ -7,6 +7,7 @@ import Experiencia from './components/Experiencia';
 import Projetos from './components/Projetos';
 import Certificacoes from './components/Certificacoes';
 import Contato from './components/Contato';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Certificacoes />
         <Contato />
       </main>
+      <Footer />
     </div>
   );
 }

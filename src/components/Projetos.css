@@ -4,6 +4,17 @@
     padding: 3rem 2rem;
     text-align: center;
   }
+
+  .projetos a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #ff851b; /* Define uma cor padrão para os links */
+    font-weight: bold; /* Torna o texto mais destacado */
+    transition: color 0.3s ease; /* Adiciona uma transição suave para mudanças de cor */
+}
+
+.projetos a:hover {
+    color: #001f3f; /* Altera a cor ao passar o mouse */
+}
   
   .projetos h2 {
     font-size: 2.2rem;

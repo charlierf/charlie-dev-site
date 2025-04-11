@@ -9,23 +9,23 @@ const Habilidades = () => {
       <div className="habilidades-list">
         <div className="habilidade">
           <h3>IA & Machine Learning</h3>
-          <p>LLMs (GPT, ChatOpenAI, ChatOllama), IA Generativa, CNNs, YOLO</p>
+          <p>LLMs (GPT, Ollama, Gemini), IA Generativa, CNNs, YOLO</p>
         </div>
         <div className="habilidade">
           <h3>Frameworks</h3>
-          <p>LangChain, TensorFlow, Keras, PyTorch, Scikit-learn</p>
+          <p>LangChain, TensorFlow, Keras, PyTorch, Scikit-learn, Pandas</p>
         </div>
         <div className="habilidade">
           <h3>Desenvolvimento</h3>
-          <p>Python, Java, JavaScript, Node.js, React, AngularJS</p>
+          <p>Python, Java, JavaScript, ReactJS, AngularJS</p>
         </div>
         <div className="habilidade">
           <h3>Infraestrutura</h3>
-          <p>AWS (S3), Docker, Git, GitHub Actions, CI/CD, InMemoryVectorStore</p>
+          <p>AWS (EC2, RDS, S3), Docker, Git</p>
         </div>
         <div className="habilidade">
-          <h3>Especialidades</h3>
-          <p>NLP jurídico, Prompt Engineering, Regex para parsing de documentos legais</p>
+          <h3>Bancos de Dados</h3>
+          <p>PostgreSQL, MySQL</p>
         </div>
       </div>
     </section>

@@ -4,6 +4,16 @@
     background-color: #ffffff;
     text-align: center;
   }
+
+  .certificacoes a {
+    text-decoration: none; /* Remove o sublinhado padrão */
+    color: #001f3f; /* Define uma cor padrão para os links */
+    transition: color 0.3s ease; /* Adiciona uma transição suave para mudanças de cor */
+}
+
+.certificacoes a:hover {
+    color: #ff851b; /* Altera a cor ao passar o mouse */
+}
   
   .certificacoes h2 {
     font-size: 2.2rem;

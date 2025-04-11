@@ -13,16 +13,32 @@ const Contato = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Integre aqui com um serviço de backend ou API de envio de formulários (ex: Formspree)
-    alert('Mensagem enviada! Obrigado por entrar em contato.');
-    setFormData({
-      nome: '',
-      email: '',
-      assunto: '',
-      mensagem: ''
-    });
+    try {
+      const response = await fetch('https://formspree.io/f/meoavnge', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      if (response.ok) {
+        alert('Mensagem enviada com sucesso! Obrigado por entrar em contato.');
+        setFormData({
+          nome: '',
+          email: '',
+          assunto: '',
+          mensagem: '',
+        });
+      } else {
+        alert('Ocorreu um erro ao enviar a mensagem. Tente novamente mais tarde.');
+      }
+    } catch (error) {
+      alert('Erro ao enviar a mensagem. Verifique sua conexão e tente novamente.');
+    }
   };
 
   return (

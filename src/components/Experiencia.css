@@ -3,6 +3,17 @@
     padding: 3rem 2rem;
     background-color: #ffffff;
   }
+
+  .experiencia a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #001f3f; /* Define uma cor padrão para os links */
+    font-weight: bold; /* Torna o texto mais destacado */
+    transition: color 0.3s ease; /* Adiciona uma transição suave para mudanças de cor */
+}
+
+.experiencia a:hover {
+    color: #ff851b; /* Altera a cor ao passar o mouse */
+}
   
   .experiencia h2 {
     text-align: center;
