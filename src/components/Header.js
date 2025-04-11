@@ -5,10 +5,16 @@ import './Header.css';
 
 const Header = () => {
   const [menuAberto, setMenuAberto] = useState(false);
+  const [currentLanguage, setCurrentLanguage] = useState('pt'); // Add language state
   const navRef = useRef(null);
   const hamburgerRef = useRef(null);
+
   const toggleMenu = () => {
     setMenuAberto(!menuAberto);
+  };
+
+  const toggleLanguage = () => {
+    setCurrentLanguage(currentLanguage === 'pt' ? 'en' : 'pt');
   };
 
   useEffect(() => {
@@ -71,6 +77,16 @@ const Header = () => {
               </a>
             </li>
             <li>
+              <a href="#educacao" onClick={() => setMenuAberto(false)}>
+                Educação
+              </a>
+            </li>
+            <li>
+              <a href="#idiomas" onClick={() => setMenuAberto(false)}>
+                Idiomas
+              </a>
+            </li>
+            <li>
               <a href="#contato" onClick={() => setMenuAberto(false)}>
                 Contato
               </a>
@@ -84,6 +100,18 @@ const Header = () => {
               >
                 Download CV
               </a>
+            </li>
+            <li>
+              <button 
+                className="language-selector" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleLanguage();
+                  setMenuAberto(false);
+                }}
+              >
+                {currentLanguage === 'pt' ? 'EN' : 'PT'}
+              </button>
             </li>
           </ul>
           {/* Botão de fechar (X) exibido somente quando o menu está aberto */}

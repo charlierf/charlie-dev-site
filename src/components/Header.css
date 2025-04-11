@@ -99,9 +99,29 @@ header {
     .hamburger {
       display: flex;
     }
+
+    .language-selector {
+      margin-top: 10px;
+    }
   }
   
   /* Garantir que o body não tenha espaço a direita */
   body {
     overflow-x: hidden;
+  }
+
+  .language-selector {
+    background: none;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+
+  .language-selector:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
   }
