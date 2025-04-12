@@ -1,8 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './About.css';
-import fotoPerfil from '../assets/foto.jpg'; // substitua com o nome do arquivo real
+import fotoPerfil from '../assets/foto.jpg';
 
 const About = () => {
+  const { t } = useTranslation();
+  
   return (
     <section id="sobre" className="sobre">
       <div className="sobre-wrapper">
@@ -10,16 +13,10 @@ const About = () => {
           <img src={fotoPerfil} alt="Charlie Fonseca" />
         </div>
         <div className="sobre-texto">
-          <h2>Sobre Mim</h2>
-          <p>
-            Sou <strong>Charlie Fonseca</strong>, desenvolvedor com foco em Inteligência Artificial, especializado em LLMs e Visão Computacional. Tenho formação em Direito e estou concluindo minha graduação em Ciência da Computação pela Universidade Federal de Sergipe.
-          </p>
-          <p>
-            Atuei como estagiário em IA na Chip & Cia, onde fui um dos autores do <strong>AssessorAI</strong>, sistema que automatiza pareceres jurídicos com LangChain, embeddings e LLMs. Também desenvolvo o <strong>HelpU</strong> (CNNs para radiografias) e o <strong>ReciclaHub</strong> (app de logística reversa com rotas inteligentes).
-          </p>
-          <p>
-            Busco unir tecnologia e impacto real, criando soluções inteligentes, éticas e aplicáveis. 
-          </p>
+          <h2>{t('about.title')}</h2>
+          <p dangerouslySetInnerHTML={{ __html: t('about.intro') }} />
+          <p dangerouslySetInnerHTML={{ __html: t('about.experience') }} />
+          <p>{t('about.mission')}</p>
         </div>
       </div>
     </section>
