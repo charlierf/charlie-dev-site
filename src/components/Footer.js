@@ -1,8 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './Footer.css';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer">
       <div className="social-links">
@@ -21,7 +24,9 @@ const Footer = () => {
           <FaGithub className="social-icon" /> GitHub
         </a>
       </div>
-      <p>&copy; {new Date().getFullYear()} Charlie Fonseca. Todos os direitos reservados.</p>
+      <p>
+        {t('footer.copyright', { year: new Date().getFullYear(), interpolation: { prefix: '{', suffix: '}' } })}
+      </p>
     </footer>
   );
 };

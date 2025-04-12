@@ -1,31 +1,34 @@
 // src/components/Skills.js
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './Skills.css';
 
 const Skills = () => {
+  const { t } = useTranslation();
+  
   return (
     <section id="habilidades" className="habilidades">
-      <h2>Habilidades</h2>
+      <h2>{t('skills.title')}</h2>
       <div className="habilidades-list">
         <div className="habilidade">
-          <h3>IA & Machine Learning</h3>
-          <p>LLMs (GPT, Ollama, Gemini), IA Generativa, CNNs, YOLO</p>
+          <h3>{t('skills.ai.title')}</h3>
+          <p>{t('skills.ai.description')}</p>
         </div>
         <div className="habilidade">
-          <h3>Frameworks</h3>
-          <p>LangChain, TensorFlow, Keras, PyTorch, Scikit-learn, Pandas</p>
+          <h3>{t('skills.frameworks.title')}</h3>
+          <p>{t('skills.frameworks.description')}</p>
         </div>
         <div className="habilidade">
-          <h3>Desenvolvimento</h3>
-          <p>Python, Java, JavaScript, ReactJS, AngularJS</p>
+          <h3>{t('skills.development.title')}</h3>
+          <p>{t('skills.development.description')}</p>
         </div>
         <div className="habilidade">
-          <h3>Infraestrutura</h3>
-          <p>AWS (EC2, RDS, S3), Docker, Git</p>
+          <h3>{t('skills.infrastructure.title')}</h3>
+          <p>{t('skills.infrastructure.description')}</p>
         </div>
         <div className="habilidade">
-          <h3>Bancos de Dados</h3>
-          <p>PostgreSQL, MySQL</p>
+          <h3>{t('skills.databases.title')}</h3>
+          <p>{t('skills.databases.description')}</p>
         </div>
       </div>
     </section>
