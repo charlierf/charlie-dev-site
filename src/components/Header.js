@@ -95,7 +95,8 @@ const Header = () => {
             </li>
             <li>
               <a
-                href="/curriculo.pdf"
+                href={t('cvLink')}
+                download
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMenuAberto(false)}

@@ -9,7 +9,8 @@ export const navigation = {
     educacao: 'Education',
     idiomas: 'Languages',
     contato: 'Contact',
-    downloadCV: 'Download CV'
+    downloadCV: 'Download CV',
+    cvLink: '/resume.pdf'
   },
   pt: {
     inicio: 'Início',
@@ -21,6 +22,7 @@ export const navigation = {
     educacao: 'Educação',
     idiomas: 'Idiomas',
     contato: 'Contato',
-    downloadCV: 'Download CV'
+    downloadCV: 'Download CV',
+    cvLink: '/curriculo.pdf'
   }
 };
