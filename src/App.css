@@ -28,7 +28,7 @@ body, html {
     text-decoration: none;
   }
   
-  section {
+  div section {
     padding: 4rem 2rem;
     scroll-margin-top: 4rem;
   }
