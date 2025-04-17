@@ -1,20 +1,21 @@
 // src/components/Header.js
 import React, { useState, useRef, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import logo from '../assets/logo.png';
 import './Header.css';
 
 const Header = () => {
   const [menuAberto, setMenuAberto] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState('pt'); // Add language state
   const navRef = useRef(null);
   const hamburgerRef = useRef(null);
+  const { t, i18n } = useTranslation();
 
   const toggleMenu = () => {
     setMenuAberto(!menuAberto);
   };
 
-  const toggleLanguage = () => {
-    setCurrentLanguage(currentLanguage === 'pt' ? 'en' : 'pt');
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
   };
 
   useEffect(() => {
@@ -41,64 +42,66 @@ const Header = () => {
       <div className="header-container">
         <div className="logo">          
           <a href="#inicio">
-          <img src={logo} alt="Logo" />
-            Charlie Fonseca</a>
+            <img src={logo} alt="Logo" />
+            Charlie Fonseca
+          </a>
         </div>
         <nav ref={navRef} className={`nav ${menuAberto ? 'aberto' : ''}`}>
           <ul>
             <li>
               <a href="#inicio" onClick={() => setMenuAberto(false)}>
-                Início
+                {t('inicio')}
               </a>
             </li>
             <li>
               <a href="#sobre" onClick={() => setMenuAberto(false)}>
-                Sobre
+                {t('sobre')}
               </a>
             </li>
             <li>
               <a href="#habilidades" onClick={() => setMenuAberto(false)}>
-                Habilidades
+                {t('habilidades')}
               </a>
             </li>
             <li>
               <a href="#experiencia" onClick={() => setMenuAberto(false)}>
-                Experiência
+                {t('experiencia')}
               </a>
             </li>
             <li>
               <a href="#projetos" onClick={() => setMenuAberto(false)}>
-                Projetos
+                {t('projetos')}
               </a>
             </li>
             <li>
               <a href="#certificacoes" onClick={() => setMenuAberto(false)}>
-                Certificações
+                {t('certificacoes')}
               </a>
             </li>
             <li>
               <a href="#educacao" onClick={() => setMenuAberto(false)}>
-                Educação
+                {t('educacao')}
               </a>
             </li>
             <li>
               <a href="#idiomas" onClick={() => setMenuAberto(false)}>
-                Idiomas
+                {t('idiomas')}
               </a>
             </li>
             <li>
               <a href="#contato" onClick={() => setMenuAberto(false)}>
-                Contato
+                {t('contato')}
               </a>
             </li>
             <li>
               <a
-                href="/curriculo.pdf"
+                href={t('cvLink')}
+                download
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMenuAberto(false)}
               >
-                Download CV
+                {t('downloadCV')}
               </a>
             </li>
             <li>
@@ -106,15 +109,15 @@ const Header = () => {
                 className="language-selector" 
                 onClick={(e) => {
                   e.preventDefault();
-                  toggleLanguage();
+                  const newLang = i18n.language === 'pt' ? 'en' : 'pt';
+                  changeLanguage(newLang);
                   setMenuAberto(false);
                 }}
               >
-                {currentLanguage === 'pt' ? 'EN' : 'PT'}
+                {i18n.language === 'pt' ? 'EN' : 'PT'}
               </button>
             </li>
           </ul>
-          {/* Botão de fechar (X) exibido somente quando o menu está aberto */}
           {menuAberto && (
             <div className="close-button" onClick={toggleMenu}>
               X

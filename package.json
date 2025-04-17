@@ -4,8 +4,11 @@
   "private": true,
   "dependencies": {
     "charlie-dev-site": "file:",
+    "i18next": "^24.2.3",
+    "i18next-browser-languagedetector": "^8.0.4",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-i18next": "^15.4.1",
     "react-icons": "^5.5.0",
     "react-router-dom": "^6.0.0",
     "react-scripts": "5.0.0"

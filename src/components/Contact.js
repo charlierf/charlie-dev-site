@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import './Contact.css';
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     nome: '',
     email: '',
@@ -15,7 +17,6 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Integre aqui com um serviço de backend ou API de envio de formulários (ex: Formspree)
     try {
       const response = await fetch('https://formspree.io/f/meoavnge', {
         method: 'POST',
@@ -26,7 +27,7 @@ const Contact = () => {
       });
   
       if (response.ok) {
-        alert('Mensagem enviada com sucesso! Obrigado por entrar em contato.');
+        alert(t('contact.form.success'));
         setFormData({
           nome: '',
           email: '',
@@ -34,57 +35,61 @@ const Contact = () => {
           mensagem: '',
         });
       } else {
-        alert('Ocorreu um erro ao enviar a mensagem. Tente novamente mais tarde.');
+        alert(t('contact.form.error'));
       }
     } catch (error) {
-      alert('Erro ao enviar a mensagem. Verifique sua conexão e tente novamente.');
+      alert(t('contact.form.error'));
     }
   };
 
   return (
     <section id="contato" className="contato">
-      <h2>Contato</h2>
+      <h2>{t('contact.title')}</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label>Nome</label>
-          <input 
-            type="text" 
-            name="nome" 
-            value={formData.nome} 
-            onChange={handleChange} 
-            required 
+          <label>{t('contact.form.name.label')}</label>
+          <input
+            type="text"
+            name="nome"
+            value={formData.nome}
+            onChange={handleChange}
+            placeholder={t('contact.form.name.placeholder')}
+            required
           />
         </div>
         <div className="form-group">
-          <label>E-mail</label>
-          <input 
-            type="email" 
-            name="email" 
-            value={formData.email} 
-            onChange={handleChange} 
-            required 
+          <label>{t('contact.form.email.label')}</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder={t('contact.form.email.placeholder')}
+            required
           />
         </div>
         <div className="form-group">
-          <label>Assunto</label>
-          <input 
-            type="text" 
-            name="assunto" 
-            value={formData.assunto} 
-            onChange={handleChange} 
-            required 
+          <label>{t('contact.form.subject.label')}</label>
+          <input
+            type="text"
+            name="assunto"
+            value={formData.assunto}
+            onChange={handleChange}
+            placeholder={t('contact.form.subject.placeholder')}
+            required
           />
         </div>
         <div className="form-group">
-          <label>Mensagem</label>
+          <label>{t('contact.form.message.label')}</label>
           <textarea 
             name="mensagem" 
             value={formData.mensagem} 
-            onChange={handleChange} 
+            onChange={handleChange}
+            placeholder={t('contact.form.message.placeholder')}
             required 
           ></textarea>
         </div>
-        <button type="submit">Enviar</button>
+        <button type="submit">{t('contact.form.submit')}</button>
       </form>
     </section>
   );

@@ -1,35 +1,46 @@
 // src/components/Projetos.js
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './Projects.css';
 
 const Projects = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="projetos" className="projetos">
-      <h2>Projetos</h2>
+      <h2>{t('projects.title')}</h2>
       <div className="projetos-grid">
         <div className="projeto-item">
-          <h3><a href='https://revistas.inpi.gov.br/pdf/Programa_de_computador2827.pdf'>AssessorAI</a></h3>
-          <p>
-            Sistema registrado no INPI que automatiza análises jurídicas com LLMs e pipeline RAG, utilizando LangChain e OpenAIEmbeddings.
-          </p>
+          <h3>
+            <a href={t('projects.items.assessorai.url')}>
+              {t('projects.items.assessorai.title')}
+            </a>
+          </h3>
+          <p>{t('projects.items.assessorai.description')}</p>
         </div>
         <div className="projeto-item">
-          <h3><a href='https://www.institutoclaro.org.br/nossas-novidades/conheca-os-projetos-selecionados-para-a-13a-edicao-do-campus-mobile/'>HelpU</a></h3>
-          <p>
-            Aplicativo em prototipagem para suporte a diagnósticos radiográficos com CNNs, aprovado na 13ª edição da Campus Mobile.
-          </p>
+          <h3>
+            <a href={t('projects.items.helpu.url')}>
+              {t('projects.items.helpu.title')}
+            </a>
+          </h3>
+          <p>{t('projects.items.helpu.description')}</p>
         </div>
         <div className="projeto-item">
-          <h3><a href='https://reciclahub.nebulaweb.com.br/'>ReciclaHub</a></h3>
-          <p>
-            App para sustentabilidade com funcionalidades de agendamento, gamificação e rotas inteligentes de coleta seletiva.
-          </p>
+          <h3>
+            <a href={t('projects.items.reciclahub.url')}>
+              {t('projects.items.reciclahub.title')}
+            </a>
+          </h3>
+          <p>{t('projects.items.reciclahub.description')}</p>
         </div>
         <div className="projeto-item">
-          <h3><a href="https://github.com/charlierf/hands-on-ml-face-recognition">Reconhecimento Facial com Keras</a></h3>
-          <p>
-            Classificador de rostos utilizando CNNs com datasets LFW e Olivetti, com foco em pré-processamento e otimização de modelos.
-          </p>
+          <h3>
+            <a href={t('projects.items.facial_recognition.url')}>
+              {t('projects.items.facial_recognition.title')}
+            </a>
+          </h3>
+          <p>{t('projects.items.facial_recognition.description')}</p>
         </div>
       </div>
     </section>
