@@ -1,39 +1,44 @@
+/* Hero.css */
+
 .hero {
-  position: relative;
-  overflow: hidden;
-  /* Dois backgrounds: gradiente dinâmico + imagem de fundo */
-  background:
-    radial-gradient(
-      600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-      rgba(255,255,255,0.08),
-      transparent 80%
-    ),
-    url('../assets/banner-background.jpg') center/cover no-repeat;
-  transition: background 0.2s;
-  z-index: 0;
+  position: relative; /* Necessário para o contexto de empilhamento */
   height: 80vh;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: none;
+}
+
+.hero-video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1; /* Vídeo na camada 1 */
+}
+
+.hero::after { /* Overlay escuro */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Ajuste a opacidade */
+  z-index: 2; /* Overlay na camada 2, sobre o vídeo */
+}
+
+.hero-content {
+  position: relative; /* Para que o z-index funcione */
+  z-index: 3; /* Conteúdo na camada 3, sobre o overlay */
   color: #ffffff;
   text-align: center;
 }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.4); /* Para melhorar a legibilidade do texto */
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
+/* Estilos específicos para h1, h2, button dentro de .hero-content */
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
@@ -59,21 +64,15 @@
   background-color: #e67e22;
 }
 
-/* Em telas menores, empilhar os elementos verticalmente */
-@media (max-width: 768px) {
-  .sobre-wrapper {
-    flex-direction: column;
-  }
-  
-  .sobre-img, .sobre-texto {
-    min-width: 100%;
-    text-align: center;
-  }
-}
-
+/* Media query para fallback (opcional) */
 @media (max-width: 900px) {
+  /* Se quiser usar imagem em mobile: */
+  /*
   .hero {
     background: url('../assets/banner-background.jpg') center/cover no-repeat;
-    filter: none;
   }
+  .hero-video-background {
+    display: none;
+  }
+  */
 }
